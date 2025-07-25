@@ -4,10 +4,13 @@ import os
 from dotenv import load_dotenv
 from app.whatsapp import send_whatsapp_message
 from app.ai import get_eco_tip
+from app import telegram_bot
 
 load_dotenv()
 
 app = FastAPI()
+
+app.include_router(telegram_bot.router)
 
 @app.get("/")
 def read_root():

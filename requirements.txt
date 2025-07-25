@@ -3,3 +3,4 @@ uvicorn
 twilio
 python-dotenv
 openai
+python-telegram-bot==20.3
